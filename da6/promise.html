@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>promise example</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        function displaySome(kuch){
+            document.getElementById("demo").innerHTML = kuch ;
+
+        }
+        let meraVaada = new Promise(function(meraHull,meraInkaar){
+            let x = 0;
+            if (x===0){
+                meraHull("thik hai");
+            }
+                else {
+                    meraInkaar("kuch gadbad hai");
+                }
+                
+            
+        });
+    meraVaada.then(
+        function(value){displaySome(value); },
+        function(error){ displaySome(error);}
+    )
+    </script>
+</body>
+</html>
